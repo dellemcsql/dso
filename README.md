@@ -67,7 +67,6 @@ Expand-Archive -LiteralPath $env:USERPROFILE\Downloads\dso_windows_x64.zip -Dest
 mkdir $env:USERPROFILE/.dso
 Copy-Item -Path $env:USERPROFILE\Downloads\dso_windows_x64\dso.exe -Destination $env:USERPROFILE/.dso/dso.exe
 $pth = join-path $env:USERPROFILE ".dso"; $Env:PATH = "$pth;$Env:PATH"
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 dso completion powershell | Out-String | Invoke-Expression
 dso -h
 ```
