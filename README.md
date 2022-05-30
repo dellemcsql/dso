@@ -54,19 +54,15 @@ It gets even more complex, cumbersome, difficult, and most importantly human err
 Above mentioned steps can also be done using PowerShell(Administrative mode) 
 ```Powershell
 Invoke-WebRequest https://raw.githubusercontent.com/dellemcsql/dso/main/release/downloads/v0.9.6/dso_windows_x64.zip -OutFile $env:USERPROFILE\Downloads\dso_windows_x64.zip
-
 Expand-Archive -LiteralPath $env:USERPROFILE\Downloads\dso_windows_x64.zip -DestinationPath $env:USERPROFILE\Downloads\dso_windows_x64 -Force
-
 mkdir $env:USERPROFILE/.dso
-
 Copy-Item -Path $env:USERPROFILE\Downloads\dso_windows_x64\dso.exe 
-
 $env:USERPROFILE/.dso/dso.exe
 $pth = join-path $env:USERPROFILE ".dso"
 $Env:PATH = "$pth;$Env:PATH"
 refreshenv
-
 dso completion powershell | Out-String | Invoke-Expression
+dso -h
 ```
 
 > For Linux environment
@@ -77,16 +73,27 @@ dso completion powershell | Out-String | Invoke-Expression
 4. Make the binary file executable using below command.
    ```
    chmod +x <binary_path> 
-5. Add binary path to your executable path using below command.
+5. Add binary location to your executable path using below command.
     - For bash shell
         ```bash
-        echo "export PATH=$PATH:<binary_path>" >> ~/.bash_profile
+        echo "export PATH=$PATH:<binary_location>" >> ~/.bash_profile
         source ~/.bash_profile
         ```
     - For zsh shell
         ```bash
-        echo "export PATH=$PATH:<binary_path>" >> ~/.zshrc
+        echo "export PATH=$PATH:<binary_location>" >> ~/.zshrc
         source ~/.zshrc
         ```
 6. Set auto-completion for your terminal environment
 7. Now you can start using this tool.
+
+
+Above mentioned steps can also be done using Bash shell:
+```bash
+curl -o dso_linux_x64.zip https://raw.githubusercontent.com/dellemcsql/dso/main/release/downloads/v0.9.6/dso_linux_x64.zip
+sudo unzip dso_linux_x64.zip -d /usr/local/bin/
+chmod +x /usr/local/bin/dso
+sudo sh -c 'dso completion bash > /etc/bash_completion.d/dso'
+source ~/.bashrc
+dso -h
+```
