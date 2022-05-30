@@ -1,9 +1,9 @@
-# dso (Database Solution Optimizer)
+# DSO (Database Solution Optimizer)
 An CLI utility to automate best practices settings and reporting for SQL Server and Oracle database solution
----
 <br>
 
 ---
+
 Reporting and applying best practices to overall solution is cumbersome and time-consuming process. To complete best practice setup activities, deployment team/administrators need to: -
 -	gather data about any setting/s in specific layer, 
 -	decide if the current value set for the setting is optimal or not and
@@ -21,10 +21,8 @@ Changing any: -
 
 It gets even more complex, cumbersome, difficult, and most importantly human error-prone with large number of resources as part of any solution, or with more than one solution to setup or maintain.
 
-## The Database Solution Optimizer (DSO) is a free command line utility/toolkit provided by Dell Engineering to collect, report, and automate the application of best practices. 
-> **_NOTE:_** The DSO toolkit is not a supported product, but it is provided to customers to use and customize for their own database environments. 
-
-## DSO tool benefits include: 
+### The Database Solution Optimizer (DSO) is a free command line utility/toolkit provided by Dell Engineering to collect, report, and automate the application of best practices. 
+### DSO tool benefit includes: 
 
 -	Reporting on the configuration of different layers in the database solution stack. Administrators can quickly generate reports to evaluate if best practices have been implemented.  
 -	Automating best practices. The administrator can apply best practices using the toolkit and save time.  
@@ -34,6 +32,13 @@ It gets even more complex, cumbersome, difficult, and most importantly human err
 -	DSO toolkit also provides auto-completion support for PowerShell, Bash Shell and zsh (zee shell)
 -	It provides consistent and intuitive command flow which is very much helpful in its usability.
 -	This toolkit provides agentless approach for collecting and applying best practices. It does not depend on any external client or tools hence simplifying its setup and maintenance. 
+
+> **_NOTE:_** The DSO toolkit is not a supported product, but it is provided to customers for use and customize their own database environments. 
+
+<br>
+
+#### The DSO toolkit is designed and organized by functional models based on its area of applicability. Check [dso design] and [examples] for more details.
+<br>
 
 --- 
 ## Installation and usages instructions
