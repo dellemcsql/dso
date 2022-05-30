@@ -37,7 +37,7 @@ It gets even more complex, cumbersome, difficult, and most importantly human err
 
 <br>
 
-#### The DSO toolkit is designed and organized by functional models based on its area of applicability. Check [dso design] and [examples] for more details.
+#### The DSO toolkit is designed and organized by functional models based on its area of applicability. Check [dso design](docs/README.md) and [examples](docs/examples.md) for more details.
 <br>
 
 --- 
