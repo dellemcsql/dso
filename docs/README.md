@@ -61,6 +61,19 @@ dso os rhel report -I xxx.xxx.xxx.xxx -U <username> -P <password>
 
 ![DSO Command Flow](images/3_commandFlow.png)
 
+## Completion Module
+
+To further help with ease of usage, this tool comes up with auto-completion module that requires very minimum configuration from user end.
+
+The dso tool supports auto-completion features for four different shell environment and users with choice for working with shell environment as per their need/requirements:
+- [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.2)
+- [Bash Shell](https://en.wikipedia.org/wiki/Bash_(Unix_shell))
+- [Zsh Shell](https://en.wikipedia.org/wiki/Z_shell)
+- [Fish Shell](https://fishshell.com/)
+
+Refer [Install section](../README.md#install-instructions) that covers auto-completion configuration instructions for DSO.
+
+
 ## Reporting Module 
 The reporting module is a common module that work in sync with other functional modules. It enables the administrator to collect current configuration values within different layers of the infrastructure. The reporting module allows fast analysis of several configurations within your database solution platform.  
 
@@ -89,6 +102,8 @@ PowerEdge BIOS configuration reports are important to quickly evaluate if the se
 
 The server BIOS module can also update these settings.  
 >**Caution:** Make sure there are no applications running on the server when changing any of the BIOS settings. 
+
+Reffer [BIOS module example section] for details about how to use this module with DSO.
 
 ## Linux OS Module 
 The Linux operating system module allows an administrator to report on the Huge Pages configuration. It also checks several OS kernel settings using a custom Microsoft SQL Server-tuned profile. This profile was created by the Dell engineering team to quickly apply OS settings that improve database performance. The tuned profile is used by the existing Linux tuned-adm tool to:  

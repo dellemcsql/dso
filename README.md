@@ -2,6 +2,14 @@
 An CLI utility to automate best practices settings and reporting for SQL Server and Oracle database solution
 <br>
 
+[Release Info](release/README.md)
+
+[Documentation](docs/README.md)
+
+[Examples](docs/examples/README.md)
+
+[Install Instruction](#install-instructions)
+
 ---
 
 Reporting and applying best practices to overall solution is cumbersome and time-consuming process. To complete best practice setup activities, deployment team/administrators need to: -
@@ -41,7 +49,7 @@ It gets even more complex, cumbersome, difficult, and most importantly human err
 <br>
 
 --- 
-## Installation and usages instructions
+## Install instructions
 > For Windows environment
 
 1. Find latest releasd binary from [release notes](release/README.md)
