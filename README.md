@@ -62,13 +62,7 @@ DSO tool benefit includes:
 
 Above mentioned steps can also be done in a Windows environment using PowerShell (in administrative mode) 
 ```Powershell
-Invoke-WebRequest https://raw.githubusercontent.com/dellemcsql/dso/main/release/downloads/v0.9.6/dso_windows_x64.zip -OutFile $env:USERPROFILE\Downloads\dso_windows_x64.zip
-Expand-Archive -LiteralPath $env:USERPROFILE\Downloads\dso_windows_x64.zip -DestinationPath $env:USERPROFILE\Downloads\dso_windows_x64 -Force
-mkdir $env:USERPROFILE/.dso
-Copy-Item -Path $env:USERPROFILE\Downloads\dso_windows_x64\dso.exe -Destination $env:USERPROFILE/.dso/dso.exe
-$pth = join-path $env:USERPROFILE ".dso"; $Env:PATH = "$pth;$Env:PATH"
-dso completion powershell | Out-String | Invoke-Expression
-dso -h
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/dellemcsql/dso/main/install/dso_windows_install.ps1'))
 ```
 
 > For Linux environment
@@ -100,10 +94,5 @@ dso -h
 
 Above mentioned steps can also be done using below mentioned commands in a **bash** shell:
 ```bash
-curl -o dso_linux_x64.zip https://raw.githubusercontent.com/dellemcsql/dso/main/release/downloads/v0.9.6/dso_linux_x64.zip
-sudo unzip dso_linux_x64.zip -d /usr/local/bin/
-chmod +x /usr/local/bin/dso
-sudo sh -c 'dso completion bash > /etc/bash_completion.d/dso'
-source ~/.bashrc
-dso -h
+curl -o dso_linux_x64.zip https://raw.githubusercontent.com/dellemcsql/dso/main/release/downloads/v0.9.6/dso_linux_x64.zip && sudo unzip dso_linux_x64.zip -d /usr/local/bin/ && chmod +x /usr/local/bin/dso && sudo sh -c 'dso completion bash > /etc/bash_completion.d/dso' && source ~/.bashrc
 ```
