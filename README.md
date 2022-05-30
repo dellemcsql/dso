@@ -29,8 +29,9 @@ Changing any: -
 
 It gets even more complex, cumbersome, difficult, and most importantly human error-prone with large number of resources as part of any solution, or with more than one solution to setup or maintain.
 
-### The Database Solution Optimizer (DSO) is a free command line utility/toolkit provided by Dell Engineering to collect, report, and automate the application of best practices. 
-### DSO tool benefit includes: 
+The Database Solution Optimizer (DSO) is a free command line utility/toolkit provided by Dell Engineering to collect, report, and automate the application of best practices.
+
+DSO tool benefit includes: 
 
 -	Reporting on the configuration of different layers in the database solution stack. Administrators can quickly generate reports to evaluate if best practices have been implemented.  
 -	Automating best practices. The administrator can apply best practices using the toolkit and save time.  
@@ -59,7 +60,7 @@ It gets even more complex, cumbersome, difficult, and most importantly human err
 5. Set auto-completion for your terminal environment
 6. Now you can start using this tool.
 
-Above mentioned steps can also be done using PowerShell(Administrative mode) 
+Above mentioned steps can also be done in windows environment using PowerShell (in administrative mode) 
 ```Powershell
 Invoke-WebRequest https://raw.githubusercontent.com/dellemcsql/dso/main/release/downloads/v0.9.6/dso_windows_x64.zip -OutFile $env:USERPROFILE\Downloads\dso_windows_x64.zip
 Expand-Archive -LiteralPath $env:USERPROFILE\Downloads\dso_windows_x64.zip -DestinationPath $env:USERPROFILE\Downloads\dso_windows_x64 -Force
@@ -93,10 +94,14 @@ dso -h
         source ~/.zshrc
         ```
 6. Set auto-completion for your terminal environment
+    ```bash
+    sudo sh -c 'dso completion bash > /etc/bash_completion.d/dso'
+    source ~/.bashrc
+    ```
 7. Now you can start using this tool.
 
 
-Above mentioned steps can also be done using Bash shell:
+Above mentioned steps can also be done using below mentioned commands in **bash** shell:
 ```bash
 curl -o dso_linux_x64.zip https://raw.githubusercontent.com/dellemcsql/dso/main/release/downloads/v0.9.6/dso_linux_x64.zip
 sudo unzip dso_linux_x64.zip -d /usr/local/bin/
