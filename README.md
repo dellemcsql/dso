@@ -60,7 +60,7 @@ DSO tool benefit includes:
 5. Set auto-completion for your terminal environment
 6. Now you can start using this tool.
 
-Above mentioned steps can also be done in a Windows environment using PowerShell (in administrative mode) 
+Above mentioned steps can also be done in a Windows environment using PowerShell. 
 ```Powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/dellemcsql/dso/main/install/dso_windows_install.ps1'))
 ```
