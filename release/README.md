@@ -15,5 +15,5 @@
 ---
 
 ### To download dso executable for your operating system, use the following links:
-* [For windows x64](https://github.com/dellemcsql/dso/blob/main/release/downloads/v0.9.6/dso_windows_x64.zip)
-* [For Linux x64](https://github.com/dellemcsql/dso/blob/main/release/downloads/v0.9.6/dso_linux_x64.zip)
+* [For windows x64](downloads/v0.9.6/dso_windows_x64.zip)
+* [For Linux x64](downloads/v0.9.6/dso_linux_x64.zip)
