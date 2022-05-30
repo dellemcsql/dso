@@ -1,10 +1,10 @@
 # Example
 
-This document covers examples with sample output to showcase different function and features of the DSO tool:
+This document covers examples with sample output to showcase different functions and features of the DSO tool:
 
-For Installation on operating system of your choice, please refer [Install section](../README.md#install-instructions)
+For Installation on the operating system of your choice, please refer [Install section](../README.md#install-instructions)
 
-Following are the seggrigated example sections to cover differnt areas within DSO tool:
+Following are the segregated example sections to cover different areas within the DSO tool:
 
 - [Help examples](helpExamples.md)
 - [Completion examples](completionExamples.md)
