@@ -63,6 +63,51 @@ dso os rhel report -I xxx.xxx.xxx.xxx -U <username> -P <password>
 
 ![DSO Command Flow](images/3_commandFlow.png)
 
+<br>
+
+## Connectivity Module
+
+DSO tool comes with an inbuilt connectivity module which solves the problem of deploying separate client connectivity packages or software.
+
+This module currently implements the following client packages/component out of the box which gets leveraged by different modules to access remote deployments:
+- SSH Client
+- HTTP Client
+- SQL Server client
+- Oracle client
+
+Based on the future requirement, we will be adding more clients' packages to this list. Some of them in consideration are VMware and kubernetes clients
+
+
+## Help Module
+
+DSO tool comes with inbuilt help command that showcases help about any module, sub-module, or command.  
+The help module can be invoked by using any of the below-mentioned formats:
+- by adding(-h) to any command
+- by adding (--help) to any command
+- by passing any command to the help module (dso help command_name)
+
+The Help module interacts with all modules, sub-modules, and commands and showcases the following information:
+
+- Short description
+- Long description
+- Usage format
+- All available flags with a short description
+
+
+## Example module and Info command
+DSO tool comes with an inbuilt example module which gets accessed by the **info** command.
+
+The info command is available only at command levels and showcases examples of usage of the command along with help about the command. This info command uses the following format to showcase the details:
+```bash
+dso <module> <sub-module> <command> info
+```
+For ex:-
+```bash
+dso db sql get info
+or
+dso os rhel report info
+```
+
 ## Completion Module
 
 To further help with ease of usage, this tool comes up with an auto-completion module that requires very minimal configuration from the user end.

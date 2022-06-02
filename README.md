@@ -2,13 +2,13 @@
 A CLI utility to automate best practices settings and reporting for SQL Server and Oracle database solution
 <br>
 
-[Release Info](release/README.md)
+## [Release Info](release/README.md)
 
-[Documentation](docs/README.md)
+## [Documentation](docs/README.md)
 
-[Examples](docs/examples/README.md)
+## [Examples](docs/examples/README.md)
 
-[Install Instruction](#install-instructions)
+## [Install Instruction](#install-instructions)
 
 ---
 
@@ -51,29 +51,35 @@ DSO tool benefit includes:
 
 --- 
 ## Install instructions
+---
+<br>
+
 > For Windows environment
 
-1. Find the latest released binary from [release notes](release/README.md)
-2. Download the zip file as per your operating system 
-3. Extract the zip file and keep the executable at the location of your choice
-4. Add binary path to your executable path
-5. Set auto-completion for your terminal environment
-6. Now you can start using this tool.
+- [x] 1. Find the latest released binary from [release notes](release/README.md)
+- [x] 2. Download the zip file as per your operating system 
+- [x] 3. Extract the zip file and keep the executable at the location of your choice
+- [x] 4. Add binary path to your executable path
+- [x] 5. Set auto-completion for your terminal environment
+- [x] 6. Now you can start using this tool.
 
-Above mentioned steps can also be done in a Windows environment using PowerShell. 
+Now you can start using this tool.
+
+However, above mentioned steps can also be performed with single command in a **Windows environment** using PowerShell. 
 ```Powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/dellemcsql/dso/main/install/dso_windows_install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/dellemcsql/dso/main/install/v0.9.7/dso_windows_install.ps1'))
 ```
+<br>
 
 > For Linux environment
 
-1. Find the latest released binary from [release notes](release/README.md)
-2. Download the zip file as per your operating system (Linux_x64 in this case)
-3. Unzip the downloaded file and keep the executable at the location of your choice
-4. Make the binary file executable using the below command.
+- [x] Find the latest released binary from [release notes](release/README.md)
+- [x] Download the zip file as per your operating system (Linux_x64 in this case)
+- [x] Unzip the downloaded file and keep the executable at the location of your choice
+- [x] Make the binary file executable using the below command.
    ```
    chmod +x <binary_path> 
-5. Add binary location to your executable path using the below command.
+- [x] 5. Add binary location to your executable path using the below command.
     - For bash shell
         ```bash
         echo "export PATH=$PATH:<binary_location>" >> ~/.bash_profile
@@ -84,15 +90,16 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
         echo "export PATH=$PATH:<binary_location>" >> ~/.zshrc
         source ~/.zshrc
         ```
-6. Set auto-completion for your terminal environment
+- [x] Set auto-completion for your terminal environment
     ```bash
     sudo sh -c 'dso completion bash > /etc/bash_completion.d/dso'
     source ~/.bashrc
     ```
-7. Now you can start using this tool.
+Now you can start using this tool.
 
 
-Above mentioned steps can also be done using below mentioned commands in a **bash** shell:
+However, above mentioned steps can also be performed with single step in a **Linux environment** using below command.
+
 ```bash
-curl -o dso_linux_x64.zip https://raw.githubusercontent.com/dellemcsql/dso/main/release/downloads/v0.9.6/dso_linux_x64.zip && sudo unzip dso_linux_x64.zip -d /usr/local/bin/ && chmod +x /usr/local/bin/dso && sudo sh -c 'dso completion bash > /etc/bash_completion.d/dso' && source ~/.bashrc
+curl -o dso_linux_x64.zip https://raw.githubusercontent.com/dellemcsql/dso/main/release/downloads/v0.9.7/dso_linux_x64.zip && sudo unzip dso_linux_x64.zip -d /usr/local/bin/ && chmod +x /usr/local/bin/dso && sudo sh -c 'dso completion bash > /etc/bash_completion.d/dso' && source ~/.bashrc
 ```
