@@ -1,8 +1,8 @@
 # sql sub-module usage examples
 
 ## sql sub-module supports the following commands:
-> 
-<details><summary>report</summary>
+> ## **report** command
+
 report command for the sql sub-module has the following structure:
 
 ```
@@ -21,7 +21,7 @@ EX3: // fetch report from SQL Server database (output in CSV format)
 ```bash
 dso db sql report  -I 10.0.0.1 -U user1 -o csv
 ```
-EX4: // fetch report from SQL Server database on non default port
+EX4: // fetch report from SQL Server database on a non-default port
 ```bash
 dso db sql report -I 10.0.0.2 --port 2341 -U user1 
 ```
@@ -29,10 +29,9 @@ EX5: // fetch report from SQL Server database with inline password
 ```bash
 dso db sql report -I 10.0.0.2 -U user1 -P pass1
 ```
-</details>
 
->
-<details><summary>get</summary>
+> ## **get** command
+
 get command for the sql sub-module has the following structure:
 
 ```
@@ -52,7 +51,7 @@ EX3: // validate best practice recommendation from SQL Server database (output i
 ```bash
 dso db sql get  -I 10.0.0.1 -U user1 -o csv
 ```
-EX4: // validate best practice recommendation from SQL Server database on non default port
+EX4: // validate best practice recommendation from SQL Server database on a non-default port
 ```bash
 dso db sql get -I 10.0.0.2 --port 2341 -U user1 
 ```
@@ -60,10 +59,9 @@ EX5: // validate best practice recommendation from SQL Server database with inli
 ```bash
 dso db sql get -I 10.0.0.2 -U user1 -P pass1
 ```
-</details>
 
->
-<details><summary>set</summary>
+> ## **set** command
+
 set command for the sql sub-module has the following structure:
 
 ```
@@ -101,5 +99,5 @@ EX7: // apply best practice recommendation with inline password
 ```bash
 	dso db sql set --bps -I 10.0.0.1 -U user1 -P pass1
 ```
-</details>
+
 

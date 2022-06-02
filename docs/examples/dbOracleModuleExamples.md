@@ -1,8 +1,8 @@
 # oracle sub-module usage examples
 
-## oracle sub-module supports the following commands:
-> 
-<details><summary>report</summary>
+## oracle sub-module under db module supports different commands to work with the oracle database layer withing solution. Currently, the oracle sub-module supports the following commands:
+> ## **report** Command 
+
 report command for the oracle sub-module has the following structure:
 
 ```
@@ -18,11 +18,11 @@ EX2: // fetch report from oracle database (output in JSON format)
 ```bash
 dso db oracle report  -I 10.0.0.1 --svc orcl -U user1 -o json
 ```
-EX3: // fetch report from oracle database (output in csv format)
+EX3: // fetch report from oracle database (output in CSV format)
 ```bash
 dso db oracle report  -I 10.0.0.1 --svc orcl -U user1 -o csv
 ```
-EX4: // fetch report from oracle database on non default port
+EX4: // fetch report from oracle database on a non-default port
 ```bash
 dso db oracle report -I 10.0.0.2 --port 2341 --svc orcl2 -U user1 
 ```
@@ -30,10 +30,9 @@ EX5: // fetch report from oracle database with inline password
 ```bash
 dso db oracle report -I 10.0.0.2 --svc orcl2 -U user1 -P pass1
 ```
-</details>
 
-> 
-<details><summary>get</summary>
+> ## **get** command
+
 get command for the oracle sub-module has the following structure:
 
 ```
@@ -49,11 +48,11 @@ EX2: // validate best practice recommendation for oracle database (output in JSO
 ```bash
 dso db oracle get  -I 10.0.0.1 --svc orcl -U user1 -o json
 ```
-EX3: // validate best practice recommendation for oracle database (output in csv format)
+EX3: // validate best practice recommendation for oracle database (output in CSV format)
 ```bash
 dso db oracle get  -I 10.0.0.1 --svc orcl -U user1 -o csv
 ```
-EX4: // validate best practice recommendation for oracle database on non default port
+EX4: // validate best practice recommendation for oracle database on non-default port
 ```bash
 dso db oracle get -I 10.0.0.2 --port 2341 --svc orcl2 -U user1 
 ```
@@ -61,10 +60,9 @@ EX5: // validate best practice recommendation for oracle database with inline pa
 ```bash
 dso db oracle get -I 10.0.0.2 --svc orcl2 -U user1 -P pass1
 ```
-</details>
 
-> 
-<details><summary>set</summary>
+> ## **set** command
+
 set command for the oracle sub-module has the following structure:
 
 ```
@@ -100,4 +98,3 @@ EX6: // apply redo log file best practice recommendation
 ```bash
 dso db oracle set --log -I 10.0.0.1 --svc orcl -U user1 
 ```
-</details>

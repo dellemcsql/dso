@@ -23,9 +23,9 @@ Following are the segregated example sections to cover different areas within th
   - [get examples](dbSqlModuleExamples.md)
   - [set examples](dbSqlModuleExamples.md)
 - Oracle module examples
-  - [report examples](dbOracleModuleExamples.md)
-  - [get examples](dbOracleModuleExamples.md)
-  - [set examples](dbOracleModuleExamples.md)
+  - [report examples](dbOracleModuleExamples.md#report-command)
+  - [get examples](dbOracleModuleExamples.md#get-command)
+  - [set examples](dbOracleModuleExamples.md#set-command)
 
 <br>
 
