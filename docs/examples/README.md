@@ -10,19 +10,19 @@ Following are the segregated example sections to cover different areas within th
 - [Info examples](infoExamples.md)
 - [Completion examples](completionExamples.md)
 - [Report examples](reportExamples.md)
-- [Server module examples](serverModuleExamples.md)
+- Server module examples
   - [report examples](serverModuleExamples.md)
   - [get examples](serverModuleExamples.md)
   - [set examples](serverModuleExamples.md)
-- [OS RHEL examples](osModuleExamples.md)
+- RHEL module examples
   - [report examples](osModuleExamples.md)
   - [get examples](osModuleExamples.md)
   - [set examples](osModuleExamples.md)
-- [DB SQL examples](dbSqlModuleExamples.md)
+- SQL Server module examples
   - [report examples](dbSqlModuleExamples.md)
   - [get examples](dbSqlModuleExamples.md)
   - [set examples](dbSqlModuleExamples.md)
-- [DB Oracle examples](dbOracleModuleExamples.md)
+- Oracle module examples
   - [report examples](dbOracleModuleExamples.md)
   - [get examples](dbOracleModuleExamples.md)
   - [set examples](dbOracleModuleExamples.md)

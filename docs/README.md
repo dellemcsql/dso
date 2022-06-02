@@ -12,7 +12,13 @@
 -	It provides a consistent and intuitive command flow which is very much helpful in its usability.
 -	This toolkit provides an agentless approach for collecting and applying best practices. It does not depend on any external client or tools hence simplifying its setup and maintenance. 
 
-> **_NOTE:_** The DSO toolkit is not a supported product, but it is provided to customers for use and customize their own database environments. 
+Go through the followings sections for more details:
+> [Release Information](../release/README.md)
+
+> [Usage Examples](examples/README.md)
+
+> [Install Instruction](../README.md#install-instructions)
+
 
 The DSO toolkit is designed and organized by functional models based on its area of applicability and also follows a completely modular approach with minimal or zero dependencies.  
 
@@ -21,7 +27,7 @@ The DSO toolkit is designed and organized by functional models based on its area
 As can be seen from the above representation, functional components are represented by hexagons and those highlighted in green colors are ready to ship with this release. The white-colored hexagons represent functional modules that will be added to the toolkit in a future release. 
 
 Some common modules are shown in brown colors that work alongside all functional modules and provide required capabilities across modules.  
-Black-colored Automation handler binds together all the functional and common modules.  
+Black-colored Automation handler shown in the above image binds together all the functional and common modules.  
 
 
 ### Below sections describe different components in the DSO toolkit: -

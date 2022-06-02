@@ -2,13 +2,13 @@
 A CLI utility to automate best practices settings and reporting for SQL Server and Oracle database solution
 <br>
 
-## [Release Info](release/README.md)
+> [Release Info](release/README.md)
 
-## [Documentation](docs/README.md)
+> [Documentation](docs/README.md)
 
-## [Examples](docs/examples/README.md)
+> [Examples](docs/examples/README.md)
 
-## [Install Instruction](#install-instructions)
+> [Install Instruction](#install-instructions)
 
 ---
 
@@ -46,12 +46,13 @@ DSO tool benefit includes:
 
 <br>
 
-#### The DSO toolkit is designed and organized by functional models based on its area of applicability. Check [dso design](docs/README.md) and [examples](docs/examples.md) for more details.
+ The DSO toolkit is designed and organized by functional models based on its area of applicability. Check [dso design](docs/README.md) and [examples](docs/examples.md) for more details.
 <br>
 
 --- 
-## Install instructions
----
+# Install instructions
+
+<br>
 <br>
 
 > For Windows environment
