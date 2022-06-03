@@ -1,13 +1,17 @@
 # completion mudule setup example
 
+The auto-completion feature of the DSO tool can be set up easily with help of a one-liner command as explained below based on the shell environment users are working with:
+
+<br>
+
 > ## PowerShell completion
 <br>
 
 ### PowerShell completion in Windows:
 
-    ```bash
-    dso completion powershell | Out-String | Invoke-Expression
-    ```
+```bash
+dso completion powershell | Out-String | Invoke-Expression
+```
 
 > **NOTE:** To load completions for every new session, add the output of the above command to your PowerShell profile.
 >
