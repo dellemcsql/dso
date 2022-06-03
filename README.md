@@ -76,7 +76,7 @@ DSO tool has many benefits, some of which are listed below:
 
 <br>
 
-Above mentioned steps can also be performed with a single command in a **Windows environment** using PowerShell. 
+Above mentioned steps can also be performed with a single command in a **Windows environment** using PowerShell (in administrative mode). 
 ```Powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/dellemcsql/dso/main/install/v1.0.0/dso_windows_install.ps1'))
 ```
