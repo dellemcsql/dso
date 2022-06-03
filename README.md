@@ -60,13 +60,13 @@ DSO tool benefit includes:
 - [x] 1. Find the latest released binary from [release notes](release/README.md)
 - [x] 2. Download the zip file as per your operating system 
 - [x] 3. Extract the zip file and keep the executable at the location of your choice
-- [x] 4. Add binary path to your executable path
+- [x] 4. Add the binary executable path to your executable path
 - [x] 5. Set auto-completion for your terminal environment
 - [x] 6. Now you can start using this tool.
 
 Now you can start using this tool.
 
-However, above mentioned steps can also be performed with single command in a **Windows environment** using PowerShell. 
+However, above mentioned steps can also be performed with a single command in a **Windows environment** using PowerShell. 
 ```Powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/dellemcsql/dso/main/install/v1.0.0/dso_windows_install.ps1'))
 ```
@@ -99,7 +99,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Now you can start using this tool.
 
 
-However, above mentioned steps can also be performed with single step in a **Linux environment** using below command.
+However, above mentioned steps can also be performed with a single step in a **Linux environment** using the below command.
 
 ```bash
 curl -o dso_linux_x64.zip https://raw.githubusercontent.com/dellemcsql/dso/main/release/downloads/v1.0.0/dso_linux_x64.zip && sudo unzip dso_linux_x64.zip -d /usr/local/bin/ && chmod +x /usr/local/bin/dso && sudo sh -c 'dso completion bash > /etc/bash_completion.d/dso' && source ~/.bashrc
