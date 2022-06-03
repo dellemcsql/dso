@@ -15,6 +15,12 @@ dso info <module> <sub-module> <command>
 For ex:-
 ```bash
 dso info db sql get 
+```
+![info example1](../images/info_db_sql_get.png)
+
 or
+```bash
 dso info os rhel report 
 ```
+
+![info example2](../images/info_os_rhel_report.png)

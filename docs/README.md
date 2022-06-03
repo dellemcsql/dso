@@ -8,7 +8,7 @@
 -	The DSO toolkit can be deployed and works on Windows, Linux, and Mac operating systems.  
 -	This toolkit collects and displays data in a single format. As of now, this tool supports displaying/saving data in the table, JSON, or CSV format.
 -	Help and examples for almost all commands and operations are inbuilt within this toolkit.
--	DSO toolkit also provides auto-completion support for PowerShell, Bash Shell, and zsh (zee shell)
+-	DSO toolkit also provides auto-completion support for PowerShell, Bash Shell, and ZSH (zee shell)
 -	It provides a consistent and intuitive command flow which is very much helpful in its usability.
 -	This toolkit provides an agentless approach for collecting and applying best practices. It does not depend on any external client or tools hence simplifying its setup and maintenance. 
 
@@ -76,12 +76,12 @@ dso os rhel report -I xxx.xxx.xxx.xxx -U <username> -P <password>
 DSO tool comes with an inbuilt connectivity module which solves the problem of deploying separate client connectivity packages or software.
 
 This module currently implements the following client packages/component out of the box which gets leveraged by different modules to access remote deployments:
-- SSH Client
-- HTTP Client
-- SQL Server client
-- Oracle client
+- [SSH Client](https://www.ssh.com/academy/ssh/client)
+- [HTTP Client](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+- [SQL Server client](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/client-network-configuration?view=sql-server-ver16)
+- [Oracle client](https://www.oracle.com/in/database/technologies/instant-client.html#:~:text=Oracle%20Instant%20Client%20enables%20development,full%20use%20of%20Oracle%20Database.)
 
-Based on the future requirement, we will be adding more clients' packages to this list. Some of them in consideration are VMware and kubernetes clients
+Based on the future requirement, we will be adding more clients' packages to this list. Some of them in consideration are VMware and Kubernetes clients
 
 
 ## Help Module
@@ -103,15 +103,23 @@ The Help module interacts with all modules, sub-modules, and commands and showca
 ## Example module and Info command
 DSO tool comes with an inbuilt example module which gets accessed by the **info** command.
 
-The info command is available only at command levels and showcases examples of usage of the command along with help about the command. This info command uses the following format to showcase the details:
-```bash
-dso <module> <sub-module> <command> info
+The info command showcases usage examples of the command along with help about the command. 
+
+> **NOTE:** Info commands showcase examples only for get, set and report commands for each module and sub-module. For module and sub-module, it displays only help about that module.
+
+<br>
+
+**info** command uses the following syntax format to display the details:
+```
+dso info <module> <sub-module> <command> 
 ```
 For ex:-
 ```bash
-dso db sql get info
+dso info db sql get 
+```
 or
-dso os rhel report info
+```bash
+dso info os rhel report 
 ```
 
 ## Completion Module
@@ -124,7 +132,7 @@ The dso tool supports auto-completion features for four different shell environm
 - [Zsh Shell](https://en.wikipedia.org/wiki/Z_shell)
 - [Fish Shell](https://fishshell.com/)
 
-Refer [Install section](../README.md#install-instructions) that covers auto-completion configuration instructions for DSO.
+Refer [completion configuration example section](examples/completionExamples.md) that covers auto-completion configuration instructions for DSO.
 
 
 ## Reporting Module 
@@ -157,14 +165,17 @@ PowerEdge BIOS configuration reports are important to quickly evaluate if the se
 -	X2APIC Support 
 -	Any other user-provided settings
 
-The server BIOS module can also update these settings. Refer to the [BIOS module example section](examples/serverModuleExamples.md) for details about how to use this module with DSO.
+Refer to the [BIOS module example section](examples/serverModuleExamples.md) for details about how to advantage of this module with DSO.
 
-## Linux OS Module 
+## RHEL OS Module 
 The Linux operating system module allows an administrator to report on the Huge Pages configuration. It also checks several OS kernel settings using a custom Microsoft SQL Server-tuned profile. This profile was created by the Dell engineering team to quickly apply OS settings that improve database performance. The tuned profile is used by the existing Linux tuned-adm tool to:  
 -	Report on the differences between the current OS configuration and the settings recommended in the custom Microsoft SQL Server-tuned profile. 
 -	Apply the recommended OS configuration changes from the custom-tuned profile 
 -	Report on mssql-config settings for SQL Server Instance
 -	Apply the recommended mssql-config settings
+
+Refer to the [RHEL OS module example section](examples/osModuleExamples.md) for details about how to advantage of this module with DSO.
+
 
 ## SQL Server Module 
 The Microsoft SQL Server module enables the database administrator to report and apply the different settings at the database layer of the solution. These settings could be Instance specific, database-specific, or specific configuration settings. Some examples of the settings are: -
@@ -177,6 +188,8 @@ The Microsoft SQL Server module enables the database administrator to report and
 
 Apart from the best practice reporting and its application, users also have the option to generate the general report for the database layer for inventory purposes.
 
+Refer to the [SQL Server db module example section](examples/dbSqlModuleExamples.md) for details about how to advantage of this module with DSO.
+
 ## Oracle Module 
 The Oracle database module enables the database administrator to report and apply the different settings at the database layer of the solution. These settings could be Instance specific, database-specific, or specific configuration settings. Some examples of the settings are: -
 -	Increase the number and size of the Redo Log file
@@ -187,6 +200,8 @@ The Oracle database module enables the database administrator to report and appl
 
 Apart from the best practice reporting and its application, users also have the option to generate the general report for the database layer for inventory purposes.
 
+Refer to the [Oracle db module example section](examples/dbOracleModuleExamples.md) for details about how to advantage of this module with DSO.
+
 ## Storage Module (future functionality) 
 Physical storage configuration and other related settings can be challenging and time-consuming. The storage module reports on the PowerMax storage directors and the storage LUNs. This enables the database administrator to analyze the PowerMax storage configuration and collaborate with the PowerMax administrator.  
 The storage module also provides functionality for reporting on ASM and VMware configurations. Here is the full list of capabilities: 
@@ -196,6 +211,8 @@ The storage module also provides functionality for reporting on ASM and VMware c
 -	Applying different settings on LUNs as per the requirement.
  
 As of now this module is partially complete and provides minimal reporting capabilities for **Dell PowerStore** storage.
+
+Refer to the [PowerStore storage module example section](examples/dbSqlModuleExamples.md) for details about how to advantage of this module with DSO.
 
 ## Network Module (future functionality) 
 The network module will help to work with physical and virtual network components by providing options to report and apply best practice settings. For example, this module will allow reporting on the Maximum Transmission Unit. If supported by the network switch, a maximum MTU of 9,000 will improve network performance and significantly improve actively moving a virtualized database from one server to another.  
