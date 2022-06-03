@@ -55,24 +55,40 @@ DSO tool benefit includes:
 <br>
 <br>
 
-> For Windows environment
+## user can choose two approaches to deploy the dso tool to Linux or Windows operating system:
+- Manual method
+- Automated method
+
+<br>
+
+> ## For Windows environment (Manual method)
+
+<br>
 
 - [x] 1. Find the latest released binary from [release notes](release/README.md)
-- [x] 2. Download the zip file as per your operating system 
-- [x] 3. Extract the zip file and keep the executable at the location of your choice
-- [x] 4. Add the binary executable path to your executable path
-- [x] 5. Set auto-completion for your terminal environment
+- [x] 2. Download the zip file as per your operating system.
+- [x] 3. Extract the zip file and keep the executable at the location of your choice.
+- [x] 4. Add the binary executable path to your system path variable.
+- [x] 5. Set [auto-completion](docs/examples/completionExamples.md) for your terminal environment.
 - [x] 6. Now you can start using this tool.
 
-Now you can start using this tool.
+<br>
 
-However, above mentioned steps can also be performed with a single command in a **Windows environment** using PowerShell. 
+> ## For Windows environment (Automated method)
+
+<br>
+
+Above mentioned steps can also be performed with a single command in a **Windows environment** using PowerShell. 
 ```Powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/dellemcsql/dso/main/install/v1.0.0/dso_windows_install.ps1'))
 ```
 <br>
 
-> For Linux environment
+### Reffer [examples](docs/examples/README.md) to familiarize yourself with the DSO tool.
+<br>
+
+> ## For Linux environment (Manual method)
+<br>
 
 - [x] Find the latest released binary from [release notes](release/README.md)
 - [x] Download the zip file as per your operating system (Linux_x64 in this case)
@@ -98,9 +114,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
     ```
 Now you can start using this tool.
 
+> ## For Linux environment (Automated method)
+<br>
 
-However, above mentioned steps can also be performed with a single step in a **Linux environment** using the below command.
+Above mentioned all steps can also be performed with a single step in a **Linux environment** using the below command.
 
 ```bash
 curl -o dso_linux_x64.zip https://raw.githubusercontent.com/dellemcsql/dso/main/release/downloads/v1.0.0/dso_linux_x64.zip && sudo unzip dso_linux_x64.zip -d /usr/local/bin/ && chmod +x /usr/local/bin/dso && sudo sh -c 'dso completion bash > /etc/bash_completion.d/dso' && source ~/.bashrc
 ```
+
+## Reffer [examples](docs/examples/README.md) to familiarize yourself with the DSO tool.

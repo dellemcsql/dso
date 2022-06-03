@@ -146,15 +146,15 @@ This module will have the logic inbuilt to collect current values for the desire
 
 Users can also filter reports by providing applicable flags to the module so that the report will get generated only for that specific part of the module. 
 
-For example, if the user wants to generate a report only for OS kernel settings, the user can use the command as shown below: -
-
-```bash
-dso os rhel report -w sql --tunedadm -I <Ip address> -U <username> -P <password> 
-```
-if the user wants to generate the report for all functional areas of the OS RHEL module, it can be done using the below command: 
+For example, if the user wants to generate a report only for RHEL operating system, the user can use the command as shown below: -
 
 ```bash
 dso os rhel report -w sql -I <Ip address> -U <username> -P <password> 
+```
+if the user wants to validate best-practice kernel settings on RHEL operating system, it can be done using the below command: 
+
+```bash
+dso os rhel get -w sql --tunedadm -I <Ip address> -U <username> -P <password> 
 ```
 
 ## Server BIOS Module 
